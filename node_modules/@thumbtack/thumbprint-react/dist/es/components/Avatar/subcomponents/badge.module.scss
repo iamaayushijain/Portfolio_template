@@ -1,0 +1,19 @@
+@import '~@thumbtack/thumbprint-tokens/dist/scss/_index';
+
+.badge {
+    color: $tp-color__white;
+    position: absolute;
+    border: 2px solid $tp-color__white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tp-color__green;
+    border-radius: $tp-border-radius__full;
+
+    svg {
+        fill: currentColor;
+        width: 50%;
+        height: 50%;
+    }
+}

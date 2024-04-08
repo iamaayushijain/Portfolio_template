@@ -1,0 +1,45 @@
+@import '~@thumbtack/thumbprint-tokens/dist/scss/_index';
+
+.root {
+    position: relative;
+}
+
+.rootXsmall {
+    font-size: 10px; // Non-standard
+}
+
+.rootSmall {
+    font-size: $tp-font__title__6__size;
+}
+
+.rootMedium {
+    font-size: $tp-font__title__4__size;
+}
+
+.rootLarge {
+    font-size: $tp-font__title__2__size;
+}
+
+.rootXlarge {
+    font-size: 32px; // Non-standard
+}
+
+// initialsAvatar is used when there is no image available.
+.initialsAvatar {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: initial;
+    font-weight: 700;
+}
+
+.circleAvatar {
+    border-radius: 50%;
+}
+
+.squareAvatar {
+    border-radius: 4px;
+}

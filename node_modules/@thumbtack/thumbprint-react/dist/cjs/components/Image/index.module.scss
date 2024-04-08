@@ -1,0 +1,15 @@
+.picture {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageStart {
+    display: block;
+    width: 100%;
+    opacity: 0;
+}
+
+.imageEnd {
+    opacity: 1;
+}

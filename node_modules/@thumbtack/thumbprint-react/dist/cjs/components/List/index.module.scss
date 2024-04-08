@@ -1,0 +1,26 @@
+@import '~@thumbtack/thumbprint-tokens/dist/scss/_index';
+@import '~@thumbtack/thumbprint-scss/mixins';
+
+.root {
+    margin-left: $tp-space__4;
+}
+
+.bullet {
+    list-style-type: disc;
+}
+
+.decimal {
+    list-style-type: decimal;
+}
+
+.alpha {
+    list-style-type: lower-alpha;
+}
+
+.item {
+    padding-left: $tp-space__1;
+
+    @include tp-respond-above($tp-breakpoint__small) {
+        padding-left: 12px;
+    }
+}
