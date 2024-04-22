@@ -6,13 +6,14 @@ import { About } from './components/About-me';
 import { Contactpage } from './components/contact';
 import { Project } from './components/projects';
 import {Home} from './components/home'
-import A from '/public/A.png';
+import A from '/A.png';
 import classNames from 'classnames';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
+import { motion } from "framer-motion"
 
 
 
@@ -24,6 +25,8 @@ function App() {
   return (
     <>
     <div>
+   
+
       <BrowserRouter>
 
       <Appbar />
@@ -98,7 +101,6 @@ function Appbar() {
   const buttonClasses1 = classNames(
     'text-white', // Default text color
     {'underline':  '/projects'=== activeRoute}, // Background color based on route
-    'hover:bg-gray-700',
     'hover:text-white',
     'px-3',
     'py-2',
@@ -110,7 +112,6 @@ function Appbar() {
   const buttonClasses2 = classNames(
     'text-white', // Default text color
     {'underline':  '/about'=== activeRoute}, // Background color based on route
-    'hover:bg-gray-700',
     'hover:text-white',
     'px-3',
     'py-2',
@@ -122,7 +123,6 @@ function Appbar() {
   const buttonClasses3 = classNames(
     'text-white', // Default text color
     {'underline':  '/contact'=== activeRoute}, // Background color based on route
-    'hover:bg-gray-700',
     'hover:text-white',
     'px-3',
     'py-2',
@@ -138,13 +138,22 @@ function Appbar() {
           <div className="flex items-center">
             <div className="flex justify-center items-center text-white ">
             <img src={A} alt="A"  className='h-8 rounded'/>
-              <div className="text-white hover:underline hover:cursor-pointer pl-3" onClick={() => navigate("/")}>Aayushi Jain</div>
+            <motion.div whileHover={{ scale: 1.3 }}>
+              <div className="text-white  hover:cursor-pointer pl-3" onClick={() => navigate("/")}>Aayushi Jain</div></motion.div>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4 ">
-                <button onClick={() => navigate("/projects")} className={buttonClasses1}>Projects</button>
-                <button onClick={() => navigate("/about")} className={buttonClasses2}>About me</button>
+              <motion.button whileHover={{ scale: 1.3 }}>
+
+                <button onClick={() => navigate("/projects")} className={buttonClasses1}>Projects</button> </motion.button>
+                <motion.button whileHover={{ scale: 1.3 }}>
+
+                <button onClick={() => navigate("/about")} className={buttonClasses2}>About me</button> </motion.button>
+
+                <motion.button whileHover={{ scale: 1.3 }}>
+
                 <button onClick={() => navigate("/contact")} className={buttonClasses3}>Contact me</button>
+                </motion.button>
               </div>
             </div>
           </div>

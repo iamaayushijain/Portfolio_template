@@ -5,8 +5,41 @@ import C from '/public/c-.png'
 import tail from '/public/tailwind-css.svg'
 import python from '/public/python.png'
 import { useNavigate } from 'react-router-dom'
+import { motion } from "framer-motion"
 
 
+import React, { useEffect, useState } from "react";
+import { useMotionValue, useTransform, animate } from "framer-motion";
+
+const AnimatedText = ({ text }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const displayText = useTransform(rounded, (latest) => text.slice(0, latest));
+  const [animationCompleted, setAnimationCompleted] = useState(false);
+
+  useEffect(() => {
+    const controls = animate(count, text.length, {
+      type: "tween",
+      duration: 5,
+      ease: "linear",
+      onUpdate: (latest) => {
+        if (latest === text.length) {
+          setAnimationCompleted(true);
+        }
+      },
+    });
+
+    return controls.stop;
+  }, []);
+
+  return (
+    <p className={animationCompleted ? "animation-completed" : ""}>
+      <motion.span>{displayText}</motion.span>
+    </p>
+  );
+};
+
+export default AnimatedText;
 
 
 export function Home() {
@@ -17,12 +50,27 @@ export function Home() {
         <div>
           <div className='flex justify-between items-center bg-[#0d2438] text-white pb-8 '>
             <div className='text-left w-full'>
+            <motion.div
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
               <h1 className='text-5xl font-bold text-left pb-4'>Hi, I am <span className='text-[#dabab3]'>Aayushi</span></h1>
-              <h1 className='text-3xl font-bold text-left pb-4'>Software Developer & Designer</h1>
+              </motion.div>
+
+              <motion.div
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+              <h1 className='text-3xl font-bold text-left pb-4'>Software Developer & Designer</h1></motion.div>
   
               <p className='pb-6'>
-                I am currently pursuing Computer Science at NSUT. I am actively seeking freelance opportunities to further refine my skills and contribute to impactful projects.
-              </p>
+              <AnimatedText text="I am currently pursuing Computer Science at NSUT. I am actively seeking freelance opportunities to further refine my skills and contribute to impactful projects.
+" />
+                            </p>
+
+
   
               <button
                 className='hover:underline text-[#dabab3] bg-transparent border border-solid border-[#dabab3] rounded py-2 px-4 hover:bg-[#dabab3] hover:text-white'
@@ -37,7 +85,12 @@ export function Home() {
   
           <div className='flex justify-between items-center pl-8 pr-8 bg-[#3f5575] text-white h-32 subpixel-antialiased'>
             <div className='relative w-20 h-20 group'>
-              <img src={react} alt="" className='absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0' />
+            <motion.image
+   initial={{ opacity: 0 }}
+   animate={{ opacity: 1 }}
+   transition={{ duration: 0.5 }}
+>
+<img src={react} alt="" className='absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0' /> </motion.image>
               <div className='absolute inset-0 flex items-center justify-center text-white text-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
                 React
               </div>
