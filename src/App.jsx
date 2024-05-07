@@ -41,7 +41,8 @@ function App() {
         <div className="mb-20"></div>
 
 
-<hr className = 'pt-10 border-t border-[#dabab3] opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4]
+ opacity-35  '></hr>
 
 <div className='pt-16 text-3xl text-white'>
   Follow Me
@@ -49,19 +50,24 @@ function App() {
 
 <div className="flex justify-center items-center gap-7 pt-12 h-8 text-white">
       <div className="icon-wrapper">
-        <FaLinkedin size='3rem' className="icon hover:bg-[#dabab3]" />
+        <FaLinkedin size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
       <div className="icon-wrapper">
-        <FaInstagramSquare size='3rem' className="icon hover:bg-[#dabab3]" />
+        <FaInstagramSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
       <div className="icon-wrapper">
-        <FaTwitterSquare size='3rem' className="icon hover:bg-[#dabab3]" />
+        <FaTwitterSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
       <div className="icon-wrapper">
-        <SiLeetcode size='3rem' className="icon hover:bg-[#dabab3]" />
+        <SiLeetcode size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
       <div className="icon-wrapper">
-        <FaGithubSquare size='3rem' className="icon hover:bg-[#dabab3]" />
+        <FaGithubSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
     </div>
 
@@ -86,12 +92,6 @@ function Appbar() {
   const [activeRoute, setActiveRoute] = useState('');
 
 
-
-  
-
-
-
-
   useEffect(() => {
     setActiveRoute(location.pathname);
 
@@ -105,7 +105,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -116,7 +116,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -127,7 +127,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -137,12 +137,13 @@ function Appbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex justify-center items-center text-white ">
-            <img src={A} alt="A"  className='h-8 rounded'/>
+            {/* <img src={A} alt="A"  className='h-8 rounded'/> */}
             <motion.div whileHover={{ scale: 1.3 }}>
-              <div className="text-white  hover:cursor-pointer pl-3" onClick={() => navigate("/")}>Aayushi Jain</div></motion.div>
+              <div className="  hover:cursor-pointer pl-3 text-3xl text-[#a8a4f4]
+ font-semibold" onClick={() => navigate("/")}>Aayushi.</div></motion.div>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4 ">
+            <div className="hidden md:block text-2xl">
+              <div className="ml-10 flex items-baseline space-x-4 text-2xl ">
               <motion.button whileHover={{ scale: 1.3 }}>
 
                 <button onClick={() => navigate("/projects")} className={buttonClasses1}>Projects</button> </motion.button>
@@ -161,13 +162,14 @@ function Appbar() {
             <div className="ml-4 flex items-center md:ml-6">
               <button 
                 onClick={() =>navigate("/contact")} 
-                className="hover:underline text-[#dabab3] bg-transparent border border-solid border-[#dabab3] rounded py-2 px-4 hover:bg-[#dabab3] hover:text-white text-sm font-medium"
+                className="hover:underline text-[#a8a4f4]
+ bg-transparent border border-solid border-[#a8a4f4]
+ rounded py-2 px-4 hover:bg-[#a8a4f4] 
+ hover:text-white text-sm font-medium"
               >
                 Hire Me
               </button>
-              <div className="pl-4">
-                DM
-              </div>
+             
             </div>
           </div>
         </div>
@@ -181,6 +183,8 @@ function Appbar() {
         </div>
       </div>
     </nav>
+
+    
   );
 }
 export default App

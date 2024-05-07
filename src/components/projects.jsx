@@ -7,7 +7,8 @@ export function Project(){
             <div className="mb-24"></div>
 
 
-<hr className = 'pt-10 border-t border-[#dabab3] opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4]
+ opacity-35  '></hr>
 
 
 
@@ -22,7 +23,10 @@ export function Project(){
 
   <div className='flex justify-center items-center pt-32'>
     <button
-      className='hover:underline h-8 justify-center items-center text-[#dabab3] bg-transparent border border-solid border-[#dabab3] rounded py-2 px-4 hover:bg-[#dabab3] hover:text-white hidden md:flex lg:flex-row'
+      className='hover:underline h-8 justify-center items-center text-[#a8a4f4]
+ bg-transparent border border-solid border-[#a8a4f4]
+ rounded py-2 px-4 hover:bg-[#a8a4f4]
+ hover:text-white hidden md:flex lg:flex-row'
       onClick={() => navigate('/projects')}
     >
       More projects
