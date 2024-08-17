@@ -41,7 +41,7 @@ function App() {
         <div className="mb-20"></div>
 
 
-<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '> </hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '/> 
 
 <div className='pt-16 text-3xl text-white'>
   Follow Me
@@ -138,7 +138,7 @@ function Appbar() {
             <div className="flex justify-center items-center text-white ">
             {/* <img src={A} alt="A"  className='h-8 rounded'/> */}
             <motion.div whileHover={{ scale: 1.3 }}>
-              <div className="  hover:cursor-pointer pl-3 text-3xl text-[#a8a4f4]
+              <div className="  hover:cursor-pointer md:pl-3 text-3xl text-[#a8a4f4]
  font-semibold" onClick={() => navigate("/")}>Aayushi.</div></motion.div>
             </div>
             <div className="hidden md:block text-2xl">

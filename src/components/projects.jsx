@@ -7,15 +7,14 @@ export function Project(){
             <div className="mb-24"></div>
 
 
-<hr className = 'pt-10 border-t border-[#a8a4f4]
- opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35'/>
 
 
 
 <h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'>Projects portfolio</h1>
 
 <div className='bg-[#0d2438] text-white'>
-  <div className='grid grid-cols-3 gap-1 justify-items-center'>
+  <div className='grid md:grid-cols-3 grid-cols-1 gap-1 justify-items-center'>
     <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
     <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
     <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
@@ -41,7 +40,7 @@ export function Project(){
 
 function Projects({ image, title, description }) {
     return (
-      <div>
+      <div className='py-[5vh]'>
         <img src={image} alt="'hello' "className='rounded h-full w-52' />
         <div className='w-52 bg-[#3f5575]'>
           <h1 className='text-1xl font-bold'>{title}</h1>

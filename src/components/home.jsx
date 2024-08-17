@@ -51,18 +51,18 @@ export function Home() {
           
           <div className='flex justify-between items-center bg-[#0d2438] text-white pb-8 pt-8 '>
 
-            <div className='text-left w-full ml-32'>
+            <div className='text-left w-full md:ml-32'>
             <motion.div
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
 >
-              <h1 className='text-5xl font-bold text-left pb-4'>Hi, I am <span className='text-[#a8a4f4]
+              <h1 className='md:text-5xl text-4xl font-bold text-left pb-4'>Hi, I am <span className='text-[#a8a4f4]
 '>Aayushi</span></h1>
               </motion.div>
 
            
-              <h1 className='text-3xl font-bold text-left pb-8 pt-2'>
+              <h1 className='md:text-3xl text-2xl font-bold text-left pb-8 pt-2'>
                 <AnimatedText text="Software Developer and Designer"/>
               </h1>
               
@@ -71,15 +71,11 @@ export function Home() {
 
 
   
-              <button
-                className='hover:underline text-[#a8a4f4]
- bg-transparent border border-solid border-[#a8a4f4]
- rounded py-2 px-4 hover:bg-[#a8a4f4]
- hover:text-white'
-                onClick={() => window.open(Pdf, '_blank')}
-              >
-                Download CV
+              <button className='hover:underline text-[#a8a4f4] bg-transparent border border-solid border-[#a8a4f4] rounded py-2 px-4 hover:bg-[#a8a4f4] hover:text-white'
+                      onClick={() => window.open(Pdf, '_blank')}>
+               Download CV
               </button>
+            
             </div>
 
   
@@ -89,8 +85,8 @@ export function Home() {
 
 
           
-          <div className='grid grid-cols-7 justify-items-center ml-10  text-white h-32 subpixel-antialiased pt-8 '>
-            <div></div>
+          <div className='md:grid md:grid-cols-5 hidden justify-content justify-items-center px-[10vh] py-10 text-white  subpixel-antialiased pt-8 '>
+          
             <div className='relative w-16 h-20 group'>
               <motion.image initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
               <FaReact alt="" className='absolute inset-0 size-5 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 
@@ -139,22 +135,21 @@ export function Home() {
               <div className='absolute inset-0 flex items-center justify-center text-white text-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
                 UI/UX Design
               </div>
-              <div></div>
+           
             </div>
 
           </div>
           <div className="mb-40"></div>
 
 
-          <hr className = 'pt-10 border-t border-[#a8a4f4]
- opacity-35  '></hr>
+          <hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '/>
 
   
           <h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'>Projects portfolio</h1>
   
           <div className='bg-[#0d2438] text-white'>
-            <div className='grid grid-cols-3 gap-1 justify-items-center'>
-              <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-1  justify-items-center'>
+              <Projects  image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
               <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
               <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
             </div>
@@ -178,7 +173,7 @@ export function Home() {
   
   function Projects({ image, title, description }) {
     return (
-      <div>
+      <div className='my-[5vh]'>
         <img src={image} alt="'hello' "className='rounded h-full w-52' />
         <div className='w-52 bg-[#3f5575]'>
           <h1 className='text-1xl font-bold'>{title}</h1>
