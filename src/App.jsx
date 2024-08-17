@@ -49,25 +49,33 @@ function App() {
 
 <div className="flex justify-center items-center gap-7 pt-12 h-8 text-white">
       <div className="icon-wrapper">
+        <a href='https://www.linkedin.com/in/aayyushi-jain/'  target='blank'>
         <FaLinkedin size='3rem' className="icon hover:bg-[#a8a4f4]
-" />
+" /> </a>
       </div>
+      <a href='https://www.instagram.com/aayyushi_jain/' target='blank'>
       <div className="icon-wrapper">
         <FaInstagramSquare size='3rem' className="icon hover:bg-[#a8a4f4]
 " />
-      </div>
+      </div> </a>
+
+      <a href='https://x.com/iamaayushijain' target='blank'>
       <div className="icon-wrapper">
         <FaTwitterSquare size='3rem' className="icon hover:bg-[#a8a4f4]
 " />
-      </div>
+      </div> </a>
+
+
       <div className="icon-wrapper">
         <SiLeetcode size='3rem' className="icon hover:bg-[#a8a4f4]
 " />
       </div>
+
+      <a href='https://github.com/iamaayushijain' target='blank'>
       <div className="icon-wrapper">
         <FaGithubSquare size='3rem' className="icon hover:bg-[#a8a4f4]
 " />
-      </div>
+      </div></a>
     </div>
 
 <div className='pt-32 text-white'>
