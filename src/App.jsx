@@ -41,8 +41,7 @@ function App() {
         <div className="mb-20"></div>
 
 
-<hr className = 'pt-10 border-t border-[#a8a4f4]
- opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '> </hr>
 
 <div className='pt-16 text-3xl text-white'>
   Follow Me

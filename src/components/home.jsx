@@ -8,10 +8,6 @@ import { FaPython } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
 
 
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { useMotionValue, useTransform, animate } from "framer-motion";
 
