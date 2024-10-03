@@ -7,31 +7,24 @@ export function Project(){
             <div className="mb-24"></div>
 
 
-<hr className = 'pt-10 border-t border-[#a8a4f4]
- opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35'/>
 
 
 
-<h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'>Projects portfolio</h1>
+<h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'> Tech Projects</h1>
 
 <div className='bg-[#0d2438] text-white'>
-  <div className='grid grid-cols-3 gap-1 justify-items-center'>
-    <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
-    <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
-    <Projects image={'https://react-tailwindcss-portfolio.netlify.app/static/media/developer-dark.3f07bd13.svg'} title={'Google Health Platform'} description={'Web Application'} />
-  </div>
+<div className='grid grid-cols-1 md:grid-cols-2 gap-1  justify-items-center'>
+              <Projects  image={'/Ashjin.png'} title={'Ashjin'} description={'Landing Page Template for any Business'}  link={'https://ashjin.vercel.app/'}/>
+              <Projects image={'/chatblock.png'} title={'Chatblock'} description={'Blockchain Conversational Wallet'} link={'https://chatblock-bay.vercel.app/login'} />
+              <Projects image={'/Rateify.png'} title={'Rateify'} description={'Blockchain Based User Reviews and Ratings'} link={'https://youtu.be/T_EM94vUB_Q'} />
+              <Projects image={'/Veggify.png'} title={'Veggify'} description={'AI Nutrition Companion'} link={'https://www.linkedin.com/posts/aayyushi-jain_mernstack-generativeai-webdevelopment-activity-7222827096341954560-UXZn?utm_source=share&utm_medium=member_desktop'} />
+              <Projects image={'/Chain_chest.png'} title={'Chain Chest'} description={'Decentralised Storage System'} link={'https://github.com/iamaayushijain/Chain-Chest'} />
 
-  <div className='flex justify-center items-center pt-32'>
-    <button
-      className='hover:underline h-8 justify-center items-center text-[#a8a4f4]
- bg-transparent border border-solid border-[#a8a4f4]
- rounded py-2 px-4 hover:bg-[#a8a4f4]
- hover:text-white hidden md:flex lg:flex-row'
-      onClick={() => navigate('/projects')}
-    >
-      More projects
-    </button>
-  </div>
+            </div>
+  
+
+ 
 </div>
 
 
@@ -39,14 +32,16 @@ export function Project(){
     )
 }
 
-function Projects({ image, title, description }) {
-    return (
-      <div>
-        <img src={image} alt="'hello' "className='rounded h-full w-52' />
-        <div className='w-52 bg-[#3f5575]'>
-          <h1 className='text-1xl font-bold'>{title}</h1>
-          <h2 className='text-1xl'>{description}</h2>
-        </div>
+function Projects({ image, title, description, link }) {
+  return (
+    <div className='m-[5vh] '>
+      <a href={link} target='_blank'>
+      <img src={image} alt="'hello' "className='rounded  ' />
+      <div className=' flex flex-col justify-center items-center '>
+        <h1 className='text-1xl font-bold bg-[#3f5575] rounded-sm px-[2vh] m-[1vh]'>{title}</h1>
+        <h2 className='text-1xl'>{description}</h2>
       </div>
-    );
-  }
+      </a>
+    </div>
+  );
+}
