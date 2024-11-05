@@ -14,7 +14,10 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { motion } from "framer-motion"
-
+import Instagram from './components/Instagram';
+import Presentations from './components/Presentations';
+import Branding from './components/Branding';
+import WebApp from './components/Webapp';
 
 
 
@@ -36,6 +39,12 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contactpage />} />
+          <Route path = "/webapp" element= {<WebApp/>}/>
+          <Route path = "/instagram" element= {<Instagram/>}/>
+          <Route path = "/presentations" element={<Presentations/>}/>
+          <Route path = "/branding" element = {<Branding/>} />
+
+          
         </Routes>
 
         <div className="mb-20"></div>

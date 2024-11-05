@@ -8,12 +8,9 @@ import { FaPython } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
 import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandOpenai } from "react-icons/tb";
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { useMotionValue, useTransform, animate } from "framer-motion";
+import { BentoGridSecondDemo } from '../components/assets/@/Bento';
 
 const AnimatedText = ({ text }) => {
   const count = useMotionValue(0);
@@ -169,7 +166,7 @@ export function Home() {
           <hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '/>
 
   
-          <h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'>Projects portfolio</h1>
+          <h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'> Tech Projects portfolio</h1>
   
           <div className='bg-[#0d2438] text-white'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-1  justify-items-center'>
@@ -178,7 +175,7 @@ export function Home() {
               <Projects image={'/Rateify.png'} title={'Rateify'} description={'Blockchain Based User Reviews and Ratings'} link={'https://youtu.be/T_EM94vUB_Q'} />
             </div>
   
-            <div className='flex justify-center items-center pt-32'>
+            <div className='flex justify-center items-center pt-12'>
               <button
                 className='hover:underline h-8 justify-center items-center text-[#a8a4f4] bg-transparent border border-solid border-[#a8a4f4] rounded py-2 px-4 hover:bg-[#a8a4f4] hover:text-white hidden md:flex lg:flex-row'
                 onClick={() => navigate('/projects')}
@@ -186,7 +183,32 @@ export function Home() {
                 More projects
               </button>
             </div>
+
+            <hr className = 'pt-10 mt-32 border-t border-[#a8a4f4] opacity-35  '/> 
+
+            <h1 className='pt-14 pb-8 text-4xl font-bold bg-[#0d2438] text-white'> Graphic Design Portfolio</h1>
+
+            <div className='flex px-20 py-10 justify-between'>
+
+              <div className='bg-white rounded-xl flex p-10 text-black justify-center items-center  h-[35vh] w-[30vh] drop-shadow-lg'
+              onClick={() => navigate('/instagram')}>
+                <div className='font-semibold  text-[#0d2438]'>Instagram</div>
+              </div>
+
+              <div className='bg-white rounded-xl flex text-black p-10 items-center justify-center h-[35vh] w-[30vh] drop-shadow-lg'
+              onClick={() => navigate('/branding')}>
+                <div className='font-semibold text-[#0d2438]'>Branding</div>
+              </div>
+
+              <div className='bg-white rounded-xl flex text-black p-10 items-center justify-center h-[35vh] w-[30vh] drop-shadow-lg'>
+                <div className='font-semibold text-[#0d2438]'>Presentations</div>
+              </div>
+
+            </div>
+
+
           </div>
+
         </div>
       </div>
     );
