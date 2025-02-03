@@ -14,7 +14,10 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { motion } from "framer-motion"
-
+import Instagram from './components/Instagram';
+import Presentations from './components/Presentations';
+import Branding from './components/Branding';
+import WebApp from './components/Webapp';
 
 
 
@@ -36,12 +39,18 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contactpage />} />
+          <Route path = "/webapp" element= {<WebApp/>}/>
+          <Route path = "/instagram" element= {<Instagram/>}/>
+          <Route path = "/presentations" element={<Presentations/>}/>
+          <Route path = "/branding" element = {<Branding/>} />
+
+          
         </Routes>
 
         <div className="mb-20"></div>
 
 
-<hr className = 'pt-10 border-t border-[#dabab3] opacity-35  '></hr>
+<hr className = 'pt-10 border-t border-[#a8a4f4] opacity-35  '/> 
 
 <div className='pt-16 text-3xl text-white'>
   Follow Me
@@ -49,20 +58,33 @@ function App() {
 
 <div className="flex justify-center items-center gap-7 pt-12 h-8 text-white">
       <div className="icon-wrapper">
-        <FaLinkedin size='3rem' className="icon hover:bg-[#dabab3]" />
+        <a href='https://www.linkedin.com/in/aayyushi-jain/'  target='blank'>
+        <FaLinkedin size='3rem' className="icon hover:bg-[#a8a4f4]
+" /> </a>
       </div>
+      <a href='https://www.instagram.com/aayyushi_jain/' target='blank'>
       <div className="icon-wrapper">
-        <FaInstagramSquare size='3rem' className="icon hover:bg-[#dabab3]" />
-      </div>
+        <FaInstagramSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
+      </div> </a>
+
+      <a href='https://x.com/iamaayushijain' target='blank'>
       <div className="icon-wrapper">
-        <FaTwitterSquare size='3rem' className="icon hover:bg-[#dabab3]" />
-      </div>
+        <FaTwitterSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
+      </div> </a>
+
+
       <div className="icon-wrapper">
-        <SiLeetcode size='3rem' className="icon hover:bg-[#dabab3]" />
+        <SiLeetcode size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
       </div>
+
+      <a href='https://github.com/iamaayushijain' target='blank'>
       <div className="icon-wrapper">
-        <FaGithubSquare size='3rem' className="icon hover:bg-[#dabab3]" />
-      </div>
+        <FaGithubSquare size='3rem' className="icon hover:bg-[#a8a4f4]
+" />
+      </div></a>
     </div>
 
 <div className='pt-32 text-white'>
@@ -86,12 +108,6 @@ function Appbar() {
   const [activeRoute, setActiveRoute] = useState('');
 
 
-
-  
-
-
-
-
   useEffect(() => {
     setActiveRoute(location.pathname);
 
@@ -105,7 +121,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -116,7 +132,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -127,7 +143,7 @@ function Appbar() {
     'px-3',
     'py-2',
     'rounded-md',
-    'text-sm',
+    'text-lg',
     'font-medium'
   );
 
@@ -137,12 +153,13 @@ function Appbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex justify-center items-center text-white ">
-            <img src={A} alt="A"  className='h-8 rounded'/>
+            {/* <img src={A} alt="A"  className='h-8 rounded'/> */}
             <motion.div whileHover={{ scale: 1.3 }}>
-              <div className="text-white  hover:cursor-pointer pl-3" onClick={() => navigate("/")}>Aayushi Jain</div></motion.div>
+              <div className="  hover:cursor-pointer md:pl-3 text-3xl text-[#a8a4f4]
+ font-semibold" onClick={() => navigate("/")}>Aayushi.</div></motion.div>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4 ">
+            <div className="hidden md:block text-2xl">
+              <div className="ml-10 flex items-baseline space-x-4 text-2xl ">
               <motion.button whileHover={{ scale: 1.3 }}>
 
                 <button onClick={() => navigate("/projects")} className={buttonClasses1}>Projects</button> </motion.button>
@@ -161,13 +178,14 @@ function Appbar() {
             <div className="ml-4 flex items-center md:ml-6">
               <button 
                 onClick={() =>navigate("/contact")} 
-                className="hover:underline text-[#dabab3] bg-transparent border border-solid border-[#dabab3] rounded py-2 px-4 hover:bg-[#dabab3] hover:text-white text-sm font-medium"
+                className="hover:underline text-[#a8a4f4]
+ bg-transparent border border-solid border-[#a8a4f4]
+ rounded py-2 px-4 hover:bg-[#a8a4f4] 
+ hover:text-white text-sm font-medium"
               >
                 Hire Me
               </button>
-              <div className="pl-4">
-                DM
-              </div>
+             
             </div>
           </div>
         </div>
@@ -181,6 +199,8 @@ function Appbar() {
         </div>
       </div>
     </nav>
+
+    
   );
 }
 export default App
